@@ -25,6 +25,7 @@
         zmk,underglow = &led_strip;
        zmk,physical-layout = &default_layout;
         zmk,backlight = &backlight;
+        zephyr,console = &cdc_acm_uart0;
     };
 
     vbatt: vbatt {
@@ -111,6 +112,13 @@
 
 zephyr_udc0: &usbd {
     status = "okay";
+};
+
+&zephyr_udc0 {
+    cdc_acm_uart0: cdc_acm_uart0 {
+        compatible = "zephyr,cdc-acm-uart";
+        status = "okay";
+    };
 };
 
 &flash0 {
