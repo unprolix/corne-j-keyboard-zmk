@@ -6,7 +6,9 @@
 */
 
 #include "eyelash_corne.dtsi"
-#include <behaviors/battery_history_request.dtsi>
+// Stripped upstream cormoran-specific imports:
+//   behaviors/battery_history_request.dtsi
+// Comes from cormoran's ZMK fork; we build against zmkfirmware/zmk.
 
 &default_transform {
     col-offset = <7>;

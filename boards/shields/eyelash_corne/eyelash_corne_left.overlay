@@ -6,9 +6,12 @@
 */
 
 #include "eyelash_corne.dtsi"
-#include <behaviors/battery_history_request.dtsi>
-#include <input/processors.dtsi>
-#include <input/processors/runtime-input-processor.dtsi>
+// Stripped upstream cormoran-specific imports:
+//   behaviors/battery_history_request.dtsi
+//   input/processors.dtsi
+//   input/processors/runtime-input-processor.dtsi
+// These come from cormoran's ZMK fork + custom modules; we build against
+// zmkfirmware/zmk so they don't exist on our stack.
 
 &left_encoder {
     status = "okay";
